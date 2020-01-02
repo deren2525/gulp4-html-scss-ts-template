@@ -2,6 +2,7 @@
 const { src, dest, series, watch, lastRun, parallel } = require("gulp");
 const gutil = require("gulp-util");
 const sass = require("gulp-sass");
+const packageImporter = require("node-sass-package-importer");
 const typescript = require("gulp-typescript");
 const rename = require("gulp-rename");
 const plumber = require("gulp-plumber");
@@ -52,7 +53,14 @@ function html() {
 function styles() {
   return src(PATHS.styles.src)
     .pipe(plumber({ errorHandler: errorHandler }))
-    .pipe(sass({ outputStyle: "expanded" }))
+    .pipe(
+      sass({
+        outputStyle: "expanded",
+        importer: packageImporter({
+          extensions: [".scss", ".css"]
+        })
+      })
+    )
     .pipe(
       autoprefixer({
         cascade: false

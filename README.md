@@ -1,1 +1,1 @@
-# gulp-scss-template
+# gulp4-html-scss-ts-template

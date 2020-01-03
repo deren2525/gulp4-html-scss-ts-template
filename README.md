@@ -56,7 +56,7 @@ $ npx -v
 6.13.4
 ```
 
-2. Install the gulp command line utility
+2. Install the [gulp](https://gulpjs.com/) command line utility
 ```
 $ npm install --global gulp-cli
 ```

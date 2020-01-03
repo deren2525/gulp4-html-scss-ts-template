@@ -4,9 +4,10 @@
 
 ## Features
 - SCSS to CSS converter
+- TypeScript to JavaScript converter
 - Autoprefixer CSS 
 - HTML Formatter
-- TypeScript to JavaScript converter
+- [Normalize.css](https://necolas.github.io/normalize.css/)
 
 ### 🎨 Directory structure
 

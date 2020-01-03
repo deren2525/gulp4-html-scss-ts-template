@@ -1,6 +1,6 @@
 # gulp4-html-scss-ts-template
 > HTML × SCSS × TypeScript Template🐶 By gulp v4  
-> （gulp v4 による HTML × SCSS × TypeScript テンプレート🐶）
+> （gulp v4 による HTML × SCSS × TypeScript テンプレート）
 
 ## Features
 - SCSS to CSS converter
@@ -16,7 +16,7 @@
 │  │  └─ style.scss
 │  └─ typescript
 │     └─ main.ts
-└─ dist // What is automatically converted is stored here
+└─ dist // What is automatically converted is stored here📦.
    └─ assets
       ├─ css
       │  └─ style.css

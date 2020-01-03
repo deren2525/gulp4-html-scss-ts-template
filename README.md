@@ -8,6 +8,8 @@
 - HTML Formatter
 - TypeScript to JavaScript converter
 
+### 🎨 Directory structure
+
 ```
 ...
 ├─ index.html

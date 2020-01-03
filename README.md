@@ -18,8 +18,10 @@
 │     └─ main.ts
 └─ dist // What is automatically converted is stored here
    └─ assets
-      ├─ style.css
-      └─ main.js
+      ├─ css
+      │  └─ style.css
+      └─ js
+         └─ main.js
 ```
 
 ## Recommend VSCode Extensions

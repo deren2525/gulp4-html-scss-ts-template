@@ -13,6 +13,7 @@
 
 ```
 ...
+├─ gulpfile.ts
 ├─ index.html
 ├─ src
 │  ├─ scss

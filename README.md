@@ -1,8 +1,6 @@
 # gulp4-html-scss-ts-template
 <div align="center">
-
 <img src="https://user-images.githubusercontent.com/32975158/72197803-f0d5ad80-3468-11ea-9a9e-b706eda9f90d.jpg" alt="gulp-html-scss-typescript" title="gulp-html-scss-typescript">
-
 </div>
 
 > HTML × SCSS × TypeScript Template🐶 By gulp v4

@@ -1,15 +1,14 @@
-# gulp4-pug-scss-ts-template
+# gulp4-html-scss-ts-template
 
 gulp4 + HTML + scss + TypeScript templete
 
-Requires node.js and gulp to be installed.
+Requires gulp to be installed.
 
 ## Quick start
 
 0. Install node.js and gulp
 
 ```
-$ npm install --global pug-cli
 $ npm install --global gulp-cli
 ```
 

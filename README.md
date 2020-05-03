@@ -5,13 +5,13 @@
 
 </div>
 
-> HTML × SCSS × TypeScript Template🐶 By gulp v4  
+> HTML × SCSS × TypeScript Template🐶 By gulp v4
 > （gulp v4 による HTML × SCSS × TypeScript テンプレート）
 
 ## 📦 Features
 - SCSS to CSS converter
 - TypeScript to JavaScript converter
-- Autoprefixer CSS 
+- Autoprefixer CSS
 - HTML Formatter
 - [Normalize.css](https://necolas.github.io/normalize.css/)
 
@@ -21,17 +21,19 @@
 ...
 ├─ gulpfile.ts
 ├─ index.html
-├─ src
-│  ├─ scss
+├─ src/
+│  ├─ scss/
 │  │  └─ style.scss
-│  └─ typescript
-│     └─ main.ts
-└─ dist // What is automatically converted is stored here📦.
-   └─ assets
-      ├─ css
-      │  └─ style.css
-      └─ js
-         └─ main.js
+│  ├─ typescript/
+│  │ └─ main.ts
+│  └─ image/
+│
+└─ dist/ // What is automatically converted is stored here📦.
+    ├─ css/
+    │  └─ style.css
+    ├─ js/
+    │  └─  main.js
+    └─ image/
 ```
 
 ## Recommend VSCode Extensions
@@ -40,10 +42,10 @@
 
 ## 💬 Usage
 ### 0. How to set up gulp
-If you've previously installed gulp globally, run `npm rm --global gulp` before following these instructions.  
+If you've previously installed gulp globally, run `npm rm --global gulp` before following these instructions.
 For more information, read this [Sip](https://medium.com/gulpjs/gulp-sips-command-line-interface-e53411d4467).
 
-1. Check for `node`, `npm`, and `npx`.  
+1. Check for `node`, `npm`, and `npx`.
 If they are not installed, follow the instructions [here](https://nodejs.org/en/).
 
 ```

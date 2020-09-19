@@ -11,6 +11,10 @@ const autoprefixer = require("gulp-autoprefixer");
 const browserSync = require("browser-sync").create();
 const prettify = require("gulp-prettify");
 const htmlhint = require("gulp-htmlhint");
+const imagemin = require('gulp-imagemin');
+const changed = require('gulp-changed');
+const pngquant = require('imagemin-pngquant');
+const mozjpeg = require('imagemin-mozjpeg');
 
 const PATHS = {
   html: {
@@ -19,11 +23,15 @@ const PATHS = {
   },
   styles: {
     src: "./src/scss/**/*.scss",
-    dest: "./dist/assets/css"
+    dest: "./dist/css"
   },
   scripts: {
     src: "./src/typescript/**/*.ts",
-    dest: "./dist/assets/js"
+    dest: "./dist/js"
+  },
+  image: {
+    src: "./src/image/**",
+    dest: "./dist/image"
   }
 };
 
@@ -68,7 +76,7 @@ function styles() {
     )
     .pipe(dest(PATHS.styles.dest))
     .pipe(
-      rename(function(path) {
+      rename(function (path) {
         if (/^style_/.test(path.basename)) {
           path.basename = "style_latest";
         }
@@ -87,6 +95,28 @@ function ts() {
       })
     )
     .js.pipe(dest(PATHS.scripts.dest));
+}
+
+// images
+function image() {
+  return src(PATHS.image.src)
+    .pipe(plumber({ errorHandler: errorHandler }))
+    .pipe(changed(PATHS.image.dest))
+    .pipe(imagemin([
+      pngquant({
+        quality: '65-80',
+        speed: 1,
+        floyd: 0,
+      }),
+      mozjpeg({
+        quality: 85,
+        progressive: true
+      }),
+      imagemin.svgo(),
+      imagemin.optipng(),
+      imagemin.gifsicle()
+    ]))
+    .pipe(dest(PATHS.image.dest))
 }
 
 // server
@@ -118,11 +148,12 @@ function watchFiles(done) {
   watch(PATHS.html.src, series(html, browserReload));
   watch(PATHS.styles.src, styles);
   watch(PATHS.scripts.src, ts);
+  watch(PATHS.image.src, image);
   done();
 }
 
 // commands
 exports.default = series(
-  parallel(styles, html, ts),
+  parallel(styles, html, ts, image),
   series(browsersync, watchFiles)
 );

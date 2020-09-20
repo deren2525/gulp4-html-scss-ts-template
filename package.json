@@ -4,19 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "browser-sync": "^2.26.7",
-    "fs": "^0.0.1-security",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-notify": "^3.2.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-typescript": "^6.0.0-alpha.1",
-    "ts-node": "^8.5.4",
-    "typescript-register": "^1.1.0",
-    "typescript": "^3.7.4",
-    "typescript-require": "^0.2.10"
+    "typescript": "^3.7.4"
   },
   "devDependencies": {
     "@types/node": "^13.1.2",
@@ -32,7 +21,18 @@
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.1",
     "http-proxy": ">=1.18.1",
-    "yargs-parser": ">=13.1.2"
+    "yargs-parser": ">=13.1.2",
+    "browser-sync": "^2.26.7",
+    "fs": "^0.0.1-security",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "ts-node": "^8.5.4",
+    "typescript-register": "^1.1.0",
+    "typescript-require": "^0.2.10"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
